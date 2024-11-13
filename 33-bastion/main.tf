@@ -2,7 +2,7 @@ module "bastion" {
   source  = "terraform-aws-modules/ec2-instance/aws"
   
   ami = data.aws_ami.joindevops.id
-  name = local.resoucre_name
+  name = local.resource_name
 
   instance_type          = "t3.micro"
   vpc_security_group_ids = [local.bastion_sg_id]
